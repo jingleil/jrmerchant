@@ -29,7 +29,7 @@ import org.apache.http.util.EntityUtils;
 //import org.apache.log4j.Logger;  
   
 
-public class XmlRequestHandler {
+public class RequestHandler {
 
 	/*
 	 * 调用地址:：https://paygate.jd.com/service/uniorder
@@ -38,11 +38,11 @@ public class XmlRequestHandler {
 	 * 数据格式：application/xml
 	 */
 		
-	public XmlRequestHandler(){
+	public RequestHandler(){
 	}
 
 	
-	public void doRequest(String url, String encode, String reqMethod, String xmlData) {
+	public void doXmlRequest(String url, String encode, String reqMethod, String xmlData) {
 		HttpClient httpClient = HttpClients.createDefault();
 		HttpPost httpPost = new HttpPost(url);
 		HttpResponse httpResp = null;
